@@ -1,0 +1,49 @@
+.header-container{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-name{
+    color :white;
+    font-family: arial;
+    font-weight: bolder;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 20px;
+}
+.menu{
+    margin-right: 20px;
+}
+.search{
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 32px;
+}
+.sign-up{
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    width: 80px;
+    height: 32px;
+    margin-right: 20px;
+}
+.login{
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 32px;
+    margin-right: 20px;
+}
+
+.ant-modal-body{
+    height: 2vh;
+}
+.ant-modal-content{
+    left:50%;
+    margin-bottom: 90px;
+}
