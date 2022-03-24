@@ -8,9 +8,8 @@
     gap: 10px;
     transform: translate(-50%, -50%);
     padding: 40px;
-    height: 500px;
-    width: 300px;
-    background-color: #ececec;
+    width: 280px;
+    border: 0.5px solid #a2a2a2;
     opacity: 0.75;
 }
 
@@ -36,4 +35,41 @@
 
 Button{
     margin-top: 15px;
+}
+.login-footer{
+    border-top: 1px solid #6e6c6c;
+    width: 280px;
+    margin-left: -50px;
+    margin-top: 40px;
+    place-items: center start;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: black;
+}
+.social-med-btn{
+   margin-left: 50px;
+}
+.facebook{
+color:white;
+   border-color: transparent;
+    background-color: royalblue;
+    margin: 5px;
+    height: 20px;
+    width: 25px;
+
+}
+.facebook-btn{
+    color:white;
+    border-color: transparent;
+    background-color: transparent;
+    margin: 1px;
+}
+.google{
+    color: orangered;
+    border-color: transparent;
+    background-color: white;
+    margin: 4px;
+    height: 25px;
+    width: 30px;
 }

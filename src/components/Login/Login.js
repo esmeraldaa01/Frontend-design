@@ -1,15 +1,26 @@
 import React, {useState} from "react";
+import Header from "../Header";
 import {Space, Button, Input} from 'antd';
-import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined} from '@ant-design/icons';
+import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined ,FacebookOutlined ,DownOutlined , UpOutlined } from '@ant-design/icons';
+import { AiFillGoogleCircle} from "react-icons/ai";
+import { BsFacebook} from "react-icons/bs";
 import './Login.css';
 
 
-const Login = () => {
-   
 
+
+const Login = () => {
+   const [showSocialMedia , setShowSocialMedia] = useState(false)
+
+    const showSocialMediaBtn = () => {
+       if(!showSocialMedia) setShowSocialMedia(true);
+       else setShowSocialMedia(false)
+    }
 
     return (
-        <div className='form-card'>
+        <div>
+            <Header/>
+        <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>
             <h1 style={{color: "black"}}>Login</h1>
             <Space direction="vertical" className='form-input'>
                 <Input label="name"
@@ -25,11 +36,37 @@ const Login = () => {
                 <Button block
                         value="large"
                         shape="rectangle"
+                        style={{backgroundColor:'grey'}}
                         htmlType="submit"
                 >
                     Log in
                 </Button>
+                <div className='login-footer'>
+                    <p  style={{display:'flex', alignItems:'center'}}>
+                    <div>
+                        <p style={{textAlign:'center'}}>Or</p>
+                    <p style={{display:'flex'}}>
+                   <AiFillGoogleCircle className='google' />
+                   <BsFacebook className='facebook' />
+                    </p>
+                        </div>
+                        {showSocialMedia ? <Button style={{border:'none'}} onClick={showSocialMediaBtn}> <UpOutlined /></Button>
+                            : <Button style={{border:'none'}} onClick={showSocialMediaBtn}> <DownOutlined /></Button>}
+                    </p>
+                    {showSocialMedia &&
+                        <div className='social-med-btn'>
+                        <Button type={"primary"} style={{border:'none', width:'180px'}}>
+                            <p style={{fontSize:'13px'}}> <FacebookOutlined className='facebook-btn' />Continue with Facebook </p>
+                        </Button>
+                            <Button>
+                                <p  style={{fontSize:'14px'}}>
+                                <AiFillGoogleCircle />Continue with Google
+                                </p>
+                            </Button>
+                        </div>}
+                </div>
             </Space>
+        </div>
         </div>
     )
 }

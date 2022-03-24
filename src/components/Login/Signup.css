@@ -1,0 +1,35 @@
+.signup-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin: 30px 40px 20px 50px;
+    top: 10%;
+    left: 50%;
+    align-items: center;
+}
+.left-part{
+    background-color: #ececec;
+    height: 80%;
+    width: 40%;
+  bottom: 70%;
+}
+.captcha{
+    display: flex;
+    gap: 20px;
+    width: 240px;
+    height: 60px;
+    background-color: #f5f1f1;
+    border: 1px solid #d9d6d6;
+text-align: center;
+    padding: 20px 10px 10px 20px;
+    margin-top: 30px;
+}
+.signup-button{
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: grey;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}

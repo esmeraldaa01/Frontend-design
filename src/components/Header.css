@@ -1,9 +1,12 @@
 .header-container {
-  height: 55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 8%;
+  background-color: black;
+  margin-top: 0;
 }
+
 .logo-name {
   color: white;
   font-family: arial;
@@ -15,12 +18,8 @@
 }
 .menu {
   margin-right: 20px;
-}
-.search {
-  background-color: transparent;
-  border: none;
-  width: 80px;
-  height: 32px;
+  display: flex;
+  flex-direction: row;
 }
 .sign-up {
   border-radius: 5px;
@@ -41,23 +40,3 @@
   margin-right: 20px;
 }
 
-.ant-modal-body {
-  padding: 5px;
-}
-.ant-modal-content {
-  left: 95%;
-  height: 36px;
-  width: 250px;
-  top: -90px;
-  position: absolute;
-  background-color: rgb(61, 60, 60);
-  color: aliceblue;
-}
-.paragraph {
-  text-align: center;
-}
-.horizontal{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 98px 0 10px;
-}
