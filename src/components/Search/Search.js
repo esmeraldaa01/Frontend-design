@@ -31,14 +31,12 @@ const {posts , setPosts } = useContext(Context)
             return Object.values(item).join('').toLowerCase().includes(inputValue.toLowerCase())
         })
         setPosts(filterData);
-       console.log(posts , 'p')
+        setSearchItems([...searchItems , inputValue])
     }
 
     
     const handleRemove = () => {
         setSecondModal(true);
-        setSearchItems([]);
-        setPosts(data);
     }
 
 
@@ -59,7 +57,7 @@ const {posts , setPosts } = useContext(Context)
                     })}
                 </div>
             </Modal>
-         <RemoveModal handleCancelModal={handleCancelModal} secondModal={secondModal}/>
+         <RemoveModal handleCancelModal={handleCancelModal} secondModal={secondModal} setSecondModal={setSecondModal}/>
             <div>
 
             <AiOutlineZoomIn className='search-icon'/>

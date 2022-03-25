@@ -1,8 +1,16 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import {Button, Modal} from "antd";
 import './RemoveModal.css'
+import {Context} from "../Context/Context";
+import data from "../../assests/data";
 
-const RemoveModal = ({secondModal , handleCancelModal}) => {
+const RemoveModal = ({secondModal , handleCancelModal , setSecondModal}) => {
+    const { setPosts} = useContext(Context);
+
+    const handleRemove = () => {
+        setPosts(data);
+        setSecondModal(false)
+    }
     return(
         <div>
             <Modal className='second-modal' footer={null} closable={false} visible={secondModal} onCancel={handleCancelModal}>
@@ -12,7 +20,7 @@ const RemoveModal = ({secondModal , handleCancelModal}) => {
                 <p>All recent search will be deleted</p>
                 <div className='row'>
                     <Button>Cancel</Button>
-                    <Button>Remove</Button>
+                    <Button onClick={handleRemove}>Remove</Button>
                 </div>
                 </div>
 
