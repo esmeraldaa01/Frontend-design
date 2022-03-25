@@ -10,8 +10,8 @@
 .horizontal {
     display: flex;
     justify-content: space-between;
-    width: 60%;
-    margin: 20px;
+    margin: 40px 10px 10px 10px;
+    gap: 30px;
 }
 .vertical{
     display: flex;
@@ -20,6 +20,14 @@
 .full-body{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
 
+}
+.vid-description{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.right-part{
+margin-top: 50px;
 }

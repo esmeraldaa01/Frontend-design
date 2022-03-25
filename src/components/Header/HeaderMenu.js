@@ -2,10 +2,10 @@ import React from 'react';
 import './Header.css';
 import { AiOutlineUser } from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
-import Search from "./Search";
+import Search from "../Search";
 
 
-const Header = () => {
+const HeaderMenu = () => {
     let navigate = useNavigate();
 
 
@@ -25,4 +25,4 @@ const Header = () => {
         </div>
     )
 }
-export default Header;
+export default HeaderMenu;

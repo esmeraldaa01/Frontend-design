@@ -1,8 +1,8 @@
 import React from 'react'
 import {Input, Select, Checkbox, Button} from "antd";
 import {UserOutlined, EyeInvisibleOutlined,GiftOutlined, UndoOutlined} from "@ant-design/icons";
-import Header from "../Header";
-import '../Header.css';
+import HeaderMenu from "../Header/HeaderMenu";
+import '../Header/Header.css';
 import './Signup.css';
 import { FiCircle } from 'react-icons/fi';
 
@@ -11,7 +11,7 @@ const { Option } = Select;
 const Signup = () => {
   return (
       <div>
-          <Header/>
+          <HeaderMenu/>
     <div style={{display:'flex'}}>
         <div className='left-part'>
             <div>

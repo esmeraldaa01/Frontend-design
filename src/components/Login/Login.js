@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Header from "../Header";
+import HeaderMenu from "../Header/HeaderMenu";
 import {Space, Button, Input} from 'antd';
 import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined ,FacebookOutlined ,DownOutlined , UpOutlined } from '@ant-design/icons';
 import { AiFillGoogleCircle} from "react-icons/ai";
@@ -17,7 +17,7 @@ const Login = () => {
 
     return (
         <div>
-            <Header/>
+            <HeaderMenu/>
         <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>
             <h1 style={{color: "black"}}>Login</h1>
             <Space direction="vertical" className='form-input'>
