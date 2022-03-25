@@ -7,16 +7,8 @@ import RightPart from "./RightPart";
 import './WebsiteLayout.css';
 
 const WebsiteLayout = () => {
-  const [posts, setPosts] = useState([]);
-
 
     const { Header, Footer, Sider, Content } = Layout;
-
-  useEffect(() => {
-    const webPosts = localStorage.getItem("posts");
-    setPosts(JSON.parse(webPosts));
-  }, []);
-
 
   return (
       <Layout>

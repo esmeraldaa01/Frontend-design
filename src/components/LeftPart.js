@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import data from "../assests/data";
 import './Posts.css';
 import featured from '../assests/featured.jpg'
+import {Context} from "./Context/Context";
 
 
 const LeftPart = () => {
-
+    const {posts } = useContext(Context);
     return (
         <div className='body'>
             {/*<div className='horizontal'>*/}
@@ -14,7 +15,7 @@ const LeftPart = () => {
             {/*<p><a href="#enterteiment">Enterteiment</a></p>*/}
             {/*</div>*/}
                     <div className='full-body'>
-                        {data.filter(post => post.category === 'Featured').map((p) => {
+                        {posts.filter(post => post.category === 'Featured').map((p) => {
                             return (
                                 <div className='vertical'>
                                     <p className='category'>Featured</p>
@@ -30,7 +31,7 @@ const LeftPart = () => {
                         })}
                     </div>
             <div id='news' className='full-body' >
-                {data.filter(post => post.category === 'News').map((p) => {
+                {posts.filter(post => post.category === 'News').map((p) => {
                     return (
                         <div>
                             <p className='category'>News</p>

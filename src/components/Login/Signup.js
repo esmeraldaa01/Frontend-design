@@ -15,7 +15,7 @@ const Signup = () => {
       <Layout>
           <Header><HeaderMenu/></Header>
 <Layout>
-    <Sider>
+    <Sider width={500}>
         <div className='left-part'>
             <div>
                 <h3>Your personal video library</h3>
@@ -71,8 +71,8 @@ prefix={<FiCircle/>}
             <p>I accept terms of  Dailymotion's Terms of Use and Privacy Policy </p>
             <Button className='signup-button'>Sign up</Button>
             <p>Or</p>
-            <Button type={"primary"}>Continue with Facebook</Button>
-            <Button>Continue with Google</Button>
+            <Button className='apps' type={"primary"}>Continue with Facebook</Button>
+            <Button className='apps'>Continue with Google</Button>
             <p>Already have an account?Log in</p>
     </div>
     </Content>

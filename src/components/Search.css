@@ -56,12 +56,3 @@ input:focus {
   width: 90px;
   background-color: white;
 }
-.second-modal{
- right: 25%;
-  top:50%;
-  width: 300px;
-}
-.row{
-  display: flex;
-  justify-content: space-between;
-}

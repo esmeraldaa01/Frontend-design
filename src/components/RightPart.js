@@ -1,14 +1,16 @@
 import React from "react";
-import data from "../assests/data";
+import {useContext} from "react";
 import featured from "../assests/featured.jpg";
 import  './RightPart.css';
+import {Context} from "./Context/Context";
 
 const RightPart = () => {
+    const {posts } = useContext(Context)
     return(
         <div className='container'>
             <h1>Featured videos</h1>
             <div>
-                {data.filter(post => post.category === 'Enterteiment').map((p) => {
+                {posts.filter(post => post.category === 'Enterteiment').map((p) => {
                     return (
                         <div>
                             {p.moreVideos.map((mvideo) => {
@@ -27,7 +29,7 @@ const RightPart = () => {
                 })}
             </div>
             <div style={{marginTop:'20px'}}>
-                {data.filter(post => post.category === 'News').map((p) => {
+                {posts.filter(post => post.category === 'News').map((p) => {
                     return (
                         <div>
                             {p.moreVideos.map((mvideo) => {

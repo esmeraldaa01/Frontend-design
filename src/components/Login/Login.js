@@ -23,7 +23,7 @@ const Login = () => {
         <Layout  style={{width: '100vw', height: '150vh'}}>
             <Header> <HeaderMenu/></Header>
 
-     <Content  style={{ padding: '0 50px' }}>
+     <Content style={{ padding: '0 50px' }}>
         <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>
             <h1 style={{color: "black"}}>Login</h1>
             <Space direction="vertical" className='form-input'>

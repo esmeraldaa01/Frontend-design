@@ -13,7 +13,7 @@
 .captcha{
     display: flex;
     gap: 20px;
-    width: 240px;
+    width: 300px;
     height: 60px;
     background-color: #f5f1f1;
     border: 1px solid #d9d6d6;
@@ -32,4 +32,8 @@ text-align: center;
 }
 .ant-layout-sider-children{
     background-color: white;
+}
+.apps {
+    width: 300px;
+    height: 40px;
 }
