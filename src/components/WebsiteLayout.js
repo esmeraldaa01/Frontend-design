@@ -19,14 +19,13 @@ const WebsiteLayout = () => {
 
   return (
       <Layout>
-
           <Header>
         <HeaderMenu />
           </Header>
 
           <Layout>
               <Content><LeftPart/></Content>
-              <Sider style={{backgroundColor: 'white', width:'60vw'}}>
+              <Sider width={500}>
                   <RightPart/>
               </Sider>
           </Layout>
