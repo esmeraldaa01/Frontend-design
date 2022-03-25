@@ -5,6 +5,7 @@
     color: red;
     font-size: 18px;
     font-weight: bolder;
+    margin-left: 20px;
 }
 .horizontal {
     display: flex;

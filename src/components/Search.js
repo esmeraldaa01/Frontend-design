@@ -65,9 +65,10 @@ useEffect(() => {
             <Modal className='second-modal' footer={null} closable={false} visible={secondModal} onCancel={handleCancelModal}>
                 <p>Are you sure  you want to remove all recent searches ?</p>
             <p>All recent search will be deleted</p>
-
+<div className='row'>
                 <Button>Cancel</Button>
                 <Button>Remove</Button>
+</div>
             </Modal>
             <div>
             <AiOutlineZoomIn className='search-icon'/>

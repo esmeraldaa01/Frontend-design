@@ -6,8 +6,6 @@ import featured from '../assests/featured.jpg'
 
 const Posts = () => {
 
-
-
     return (
         <div className='body'>
             <div className='horizontal'>
@@ -18,7 +16,7 @@ const Posts = () => {
                     <div className='full-body'>
                         {data.filter(post => post.category === 'Featured').map((p) => {
                             return (
-                                <div>
+                                <div className='vertical'>
                                     <p className='category'>Featured</p>
                                     <div className='horizontal'>
                                     <img width={400} height={300} src={featured}/>
@@ -45,7 +43,7 @@ const Posts = () => {
                             )
                         })}
                     </div>
-            <div id='news' >
+            <div id='news' className='full-body' >
                 {data.filter(post => post.category === 'News').map((p) => {
                     return (
                         <div>
@@ -60,8 +58,22 @@ const Posts = () => {
                         </div>
                     )
                 })}
+                {data.filter(post => post.category === 'News').map((p) => {
+                    return (
+                        <div>
+                            {p.moreVideos.map((mvideo) => {
+                                return (
+                                    <div>
+                                        <p>{mvideo.title}</p>
+                                        <p>{mvideo.added}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    )
+                })}
             </div>
-            <div id='sport'>
+            <div id='sport' className='full-body'>
                 {data.filter(post => post.category === 'Sport').map((p) => {
                     return (
                         <div>
@@ -76,8 +88,22 @@ const Posts = () => {
                         </div>
                     )
                 })}
+                {data.filter(post => post.category === 'Sport').map((p) => {
+                    return (
+                        <div>
+                            {p.moreVideos.map((mvideo) => {
+                                return (
+                                    <div>
+                                        <p>{mvideo.title}</p>
+                                        <p>{mvideo.added}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    )
+                })}
             </div>
-            <div id='enterteiment' >
+            <div id='enterteiment' className='full-body' >
                 {data.filter(post => post.category === 'Enterteiment').map((p) => {
                     return (
                         <div>
@@ -89,6 +115,20 @@ const Posts = () => {
                                     <p>{p.comment}</p>
                                 </div>
                             </div>
+                        </div>
+                    )
+                })}
+                {data.filter(post => post.category === 'Enterteiment').map((p) => {
+                    return (
+                        <div>
+                            {p.moreVideos.map((mvideo) => {
+                                return (
+                                    <div>
+                                        <p>{mvideo.title}</p>
+                                        <p>{mvideo.added}</p>
+                                    </div>
+                                )
+                            })}
                         </div>
                     )
                 })}
