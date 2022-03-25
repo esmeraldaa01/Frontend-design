@@ -8,11 +8,11 @@ const LeftPart = () => {
 
     return (
         <div className='body'>
-            <div className='horizontal'>
-            <p><a href="#news">News</a></p>
-            <p><a href="#sport">Sport</a></p>
-            <p><a href="#enterteiment">Enterteiment</a></p>
-            </div>
+            {/*<div className='horizontal'>*/}
+            {/*<p><a href="#news">News</a></p>*/}
+            {/*<p><a href="#sport">Sport</a></p>*/}
+            {/*<p><a href="#enterteiment">Enterteiment</a></p>*/}
+            {/*</div>*/}
                     <div className='full-body'>
                         {data.filter(post => post.category === 'Featured').map((p) => {
                             return (

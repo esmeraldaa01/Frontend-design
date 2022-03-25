@@ -1,0 +1,6 @@
+.container{
+    margin:  50px 5px 5px 20px;
+}
+.videos{
+    display: flex;
+}

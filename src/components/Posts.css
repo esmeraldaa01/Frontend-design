@@ -10,7 +10,7 @@
 .horizontal {
     display: flex;
     justify-content: space-between;
-    margin: 40px 10px 10px 10px;
+    margin: 15px 10px 10px 10px;
     gap: 30px;
 }
 .vertical{
