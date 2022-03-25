@@ -1,22 +1,25 @@
 import React from 'react'
-import {Input, Select, Checkbox, Button} from "antd";
+import {Input, Select, Checkbox, Button, Layout} from "antd";
 import {UserOutlined, EyeInvisibleOutlined,GiftOutlined, UndoOutlined} from "@ant-design/icons";
 import HeaderMenu from "../Header/HeaderMenu";
 import '../Header/Header.css';
 import './Signup.css';
 import { FiCircle } from 'react-icons/fi';
+import SideFooter from "../Footer/SideFooter";
 
 const { Option } = Select;
 
 const Signup = () => {
+    const { Header, Footer, Sider, Content } = Layout;
   return (
-      <div>
-          <HeaderMenu/>
-    <div style={{display:'flex'}}>
+      <Layout>
+          <Header><HeaderMenu/></Header>
+<Layout>
+    <Sider>
         <div className='left-part'>
             <div>
-    <h3>Your personal video library</h3>
-            <p>Save the videos you love to share</p>
+                <h3>Your personal video library</h3>
+                <p>Save the videos you love to share</p>
             </div>
             <div>
                 <h3>The latest channels and topics</h3>
@@ -27,6 +30,8 @@ const Signup = () => {
                 <p>Create playlists for parties and workouts</p>
             </div>
         </div>
+    </Sider>
+    <Content style={{display:'flex'}}>
         <div className='signup-container'>
             <h1>Sign up</h1>
         <Input label="name"
@@ -70,8 +75,10 @@ prefix={<FiCircle/>}
             <Button>Continue with Google</Button>
             <p>Already have an account?Log in</p>
     </div>
-    </div>
-      </div>
+    </Content>
+</Layout>
+          <Footer><SideFooter/></Footer>
+      </Layout>
   )
 }
 

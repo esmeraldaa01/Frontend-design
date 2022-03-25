@@ -24,9 +24,9 @@ const WebsiteLayout = () => {
         <HeaderMenu />
           </Header>
 
-          <Layout style={{backgroundColor: 'white', width:'100vw'}}>
+          <Layout>
               <Content><LeftPart/></Content>
-              <Sider style={{backgroundColor: 'white', width:'40vw'}}>
+              <Sider style={{backgroundColor: 'white', width:'60vw'}}>
                   <RightPart/>
               </Sider>
           </Layout>

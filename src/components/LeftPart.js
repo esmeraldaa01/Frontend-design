@@ -43,7 +43,7 @@ const LeftPart = () => {
                             </div>
                         </div>
                     )
-                })}}
+                })}
         </div>
         </div>
     );
