@@ -1,11 +1,11 @@
 import HeaderMenu from "./Header/HeaderMenu";
 import { useEffect, useState } from "react";
-import Posts from "./Posts";
+import LeftPart from "./LeftPart";
 import SideFooter from "./Footer/SideFooter";
-
 import { Layout } from 'antd';
+import RightPart from "./RightPart";
 
-const Article = () => {
+const WebsiteLayout = () => {
   const [posts, setPosts] = useState([]);
 
 
@@ -21,15 +21,18 @@ const Article = () => {
       <Layout>
 
           <Header>
-        <HeaderMenu data={posts} />
+        <HeaderMenu />
           </Header>
 
-          <Layout style={{backgroundColor: 'white'}}>
-              <Content><Posts/></Content>
+          <Layout style={{backgroundColor: 'white', width:'100vw'}}>
+              <Content><LeftPart/></Content>
+              <Sider style={{backgroundColor: 'white', width:'40vw'}}>
+                  <RightPart/>
+              </Sider>
           </Layout>
           <Footer style={{backgroundColor: 'white',padding: '0px'}}>  <SideFooter/></Footer>
       </Layout>
   );
 };
 
-export default Article;
+export default WebsiteLayout;

@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
+  background-color: black;
 }
 
 .logo-name {
@@ -11,6 +12,8 @@
   font-weight: bolder;
   text-align: left;
   font-size: 20px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 .menu {
   margin-right: 20px;
@@ -24,6 +27,7 @@
   width: 80px;
   height: 32px;
   margin-right: 20px;
+  cursor: pointer;
 }
 .login {
   border-radius: 5px;
@@ -33,5 +37,10 @@
   border: none;
   width: 80px;
   margin-right: 20px;
+  cursor: pointer;
 }
-
+.ant-layout-header{
+  line-height: 0px;
+  padding: 0px;
+  background-color: black;
+}

@@ -73,3 +73,9 @@ color:white;
     height: 25px;
     width: 30px;
 }
+.ant-layout-footer{
+    padding: 0px;
+}
+.ant-layout-content{
+    background-color: white;
+}

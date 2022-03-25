@@ -13,7 +13,7 @@ const HeaderMenu = () => {
         <div className='header-container'>
 
             <div>
-            <p className='logo-name'>dailymotion</p>
+            <p onClick={() => navigate(`/`)} className='logo-name'>dailymotion</p>
             </div>
 
          <div className='menu'>

@@ -5,10 +5,14 @@ import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined ,FacebookOutlined ,DownOu
 import { AiFillGoogleCircle} from "react-icons/ai";
 import { BsFacebook} from "react-icons/bs";
 import './Login.css';
+import SideFooter from "../Footer/SideFooter";
 
+import { Layout } from 'antd';
 
 const Login = () => {
    const [showSocialMedia , setShowSocialMedia] = useState(false)
+
+    const { Header, Footer, Sider, Content } = Layout;
 
     const showSocialMediaBtn = () => {
        if(!showSocialMedia) setShowSocialMedia(true);
@@ -16,8 +20,10 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <HeaderMenu/>
+        <Layout  style={{width: '100vw', height: '150vh'}}>
+            <Header> <HeaderMenu/></Header>
+
+     <Content  style={{ padding: '0 50px' }}>
         <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>
             <h1 style={{color: "black"}}>Login</h1>
             <Space direction="vertical" className='form-input'>
@@ -65,7 +71,11 @@ const Login = () => {
                 </div>
             </Space>
         </div>
-        </div>
-    )
+     </Content>
+         <Footer>
+            <SideFooter/>
+         </Footer>
+        </Layout>
+)
 }
 export default Login;
