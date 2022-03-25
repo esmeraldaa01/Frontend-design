@@ -1,6 +1,6 @@
 import Header from "./Header";
 import { useEffect, useState } from "react";
-import data from "../assests/data";
+import Posts from "./Posts";
 
 const Article = () => {
   const [posts, setPosts] = useState([]);
@@ -17,21 +17,9 @@ const Article = () => {
       <div className="header">
         <Header data={posts} />
       </div>
- {posts?.map((post) => {
-            return (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  width: "250px",
-                  margin: "20px",
-                }}
-              >
-                <p>{post.news}</p>
-                <p> {post.like}</p>
-              </div>
-            );
-          })}
+<div>
+<Posts/>
+</div>
     </div>
   );
 };

@@ -7,8 +7,6 @@ import { BsFacebook} from "react-icons/bs";
 import './Login.css';
 
 
-
-
 const Login = () => {
    const [showSocialMedia , setShowSocialMedia] = useState(false)
 

@@ -2,13 +2,15 @@ import React, {useEffect, useState} from "react";
 import './Search.css'
 import { AiOutlineZoomIn } from "react-icons/ai";
 import { Modal } from 'antd';
+import {Button} from 'antd';
 import data from "../assests/data";
 
 const Search = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [secondModal , setSecondModal ] = useState(false);
     const [inputValue , setInputValue] = useState("");
-    const [searchItems , setSearchItems] = useState([])
-     const [posts , setPosts] = useState([]);
+    const [searchItems , setSearchItems] = useState([]);
+    const [posts , setPosts] = useState([]);
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -33,11 +35,15 @@ useEffect(() => {
 }, [posts])
     
     const handleRemove = () => {
+        setSecondModal(true);
+        setSearchItems([]);
         setPosts([]);
-        setSearchItems([])
         localStorage.setItem('posts', JSON.stringify(posts));
     }
 
+    const handleCancelModal = () => {
+        setSecondModal(false)
+    }
 
     return(
         <div className="modal">
@@ -55,6 +61,13 @@ useEffect(() => {
                         return <p style={{color:'black'}}>{searched}</p>
                     })}
                 </div>
+            </Modal>
+            <Modal className='second-modal' footer={null} closable={false} visible={secondModal} onCancel={handleCancelModal}>
+                <p>Are you sure  you want to remove all recent searches ?</p>
+            <p>All recent search will be deleted</p>
+
+                <Button>Cancel</Button>
+                <Button>Remove</Button>
             </Modal>
             <div>
             <AiOutlineZoomIn className='search-icon'/>

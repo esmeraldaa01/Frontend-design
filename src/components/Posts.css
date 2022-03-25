@@ -1,0 +1,24 @@
+.body{
+    height: 80%;
+}
+.category{
+    color: red;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.horizontal {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 20px;
+}
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+.full-body{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+}
