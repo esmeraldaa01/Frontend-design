@@ -1,14 +1,14 @@
 import React from "react";
 import {useContext} from "react";
-import featured from "../assests/featured.jpg";
+import featured from "../../../assests/featured.jpg";
 import  './RightPart.css';
-import {Context} from "./Context/Context";
+import {Context} from "../../Context/Context";
 
 const RightPart = () => {
     const {posts } = useContext(Context)
     return(
         <div className='container'>
-            <h1>Featured videos</h1>
+            <h1 style={{fontWeight:800}}>Featured videos</h1>
             <div>
                 {posts.filter(post => post.category === 'Enterteiment').map((p) => {
                     return (

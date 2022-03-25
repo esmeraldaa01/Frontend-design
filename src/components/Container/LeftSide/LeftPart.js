@@ -1,8 +1,7 @@
 import React, {useContext} from "react";
-import data from "../assests/data";
 import './Posts.css';
-import featured from '../assests/featured.jpg'
-import {Context} from "./Context/Context";
+import featured from '../../../assests/featured.jpg'
+import {Context} from "../../Context/Context";
 
 
 const LeftPart = () => {

@@ -2,9 +2,9 @@ import React, { useState , useContext} from "react";
 import './Search.css'
 import { AiOutlineZoomIn } from "react-icons/ai";
 import { Modal } from 'antd';
-import data from "../assests/data";
+import data from "../../assests/data";
 import RemoveModal from "./RemoveModal";
-import {Context} from "./Context/Context";
+import {Context} from "../Context/Context";
 
 const Search = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);

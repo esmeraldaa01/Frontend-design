@@ -1,9 +1,9 @@
-import HeaderMenu from "./Header/HeaderMenu";
+import HeaderMenu from "../../Header/HeaderMenu";
 import { useEffect, useState } from "react";
-import LeftPart from "./LeftPart";
-import SideFooter from "./Footer/SideFooter";
+import LeftPart from "../LeftSide/LeftPart";
+import SideFooter from "../../Footer/SideFooter";
 import { Layout } from 'antd';
-import RightPart from "./RightPart";
+import RightPart from "../RightSide/RightPart";
 import './WebsiteLayout.css';
 
 const WebsiteLayout = () => {
