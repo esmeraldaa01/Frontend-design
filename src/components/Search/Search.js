@@ -1,4 +1,4 @@
-import React, { useState , useContext} from "react";
+import React, { useState , useContext , useEffect, Fragment} from "react";
 import './Search.css'
 import { AiOutlineZoomIn } from "react-icons/ai";
 import { Modal } from 'antd';
@@ -18,6 +18,7 @@ const {posts , setPosts } = useContext(Context)
 
     const showModal = () => {
         setIsModalVisible(true);
+    
     };
 
     const handleCancel = () => {
@@ -31,19 +32,27 @@ const {posts , setPosts } = useContext(Context)
             return Object.values(item).join('').toLowerCase().includes(inputValue.toLowerCase())
         })
         setPosts(filterData);
-        setSearchItems([...searchItems , inputValue])
     }
 
-    
+useEffect(() => {
+  const timer = setTimeout(() => {
+   setSearchItems([...searchItems , inputValue]);
+     setIsModalVisible(false)
+  }, 2000);
+
+  return () => clearTimeout(timer);
+}, [inputValue]);
+
     const handleRemove = () => {
         setSecondModal(true);
     }
 
 
     return(
-        <div className="modal">
-            <Modal closable={false} footer={null} visible={isModalVisible}  onCancel={handleCancel}>
-                <div className='modal'>
+        <Fragment>
+        <div>
+            <Modal width={280} bodyStyle={{padding: 0}} style={{padding:"0 !important",left:340, top: 10, height:80}} closable={false} footer={null} visible={isModalVisible}  onCancel={handleCancel}>
+                <div className='modal-body'>
                     <div  style={{backgroundColor:'black'}}>
                 <AiOutlineZoomIn className='search-icon'/>
                     <input value={inputValue}  className='search-after' onChange={handleInput} placeholder='Search'/>
@@ -57,13 +66,15 @@ const {posts , setPosts } = useContext(Context)
                     })}
                 </div>
             </Modal>
-         <RemoveModal handleCancelModal={handleCancelModal} secondModal={secondModal} setSecondModal={setSecondModal}/>
-            <div>
 
             <AiOutlineZoomIn className='search-icon'/>
             <input onClick={showModal} placeholder="Search" className='search' />
             </div>
+        <div>
+         <RemoveModal handleCancelModal={handleCancelModal} secondModal={secondModal} setSearchItems={setSearchItems} setSecondModal={setSecondModal}/>
+
         </div>
+        </Fragment>
     )
 }
 export default Search;

@@ -2,14 +2,16 @@
     display: flex;
     justify-content: space-between;
     background-color: white;
+    border:none;
+    padding-bottom:10px;
 }
-.second-modal{
-    right: 35%;
-    top: 50%;
+.text{
+    margin:20px;
+    padding-top:20px;
+text-align : center;
+font-family: arial;
 }
-
-.second-modal__body {
-    width: 500px;
-    background-color: #dedcdc;
-    color: black;
+.question{
+    font-weight:800;
+    font-size: 15px;
 }

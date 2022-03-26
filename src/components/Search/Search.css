@@ -11,24 +11,8 @@
   background-color: transparent;
   font-size: 15px;
   border: none;
-  width: 150px;
-  height: 32px;
-}
-.ant-modal-body {
-    padding: 0px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.ant-modal-content {
-  left: 105%;
-  height: 36px;
-  width: 250px;
-  top: -90px;
-  position: absolute;
-  background-color: rgb(47, 46, 46);
-  color: aliceblue;
+  width: 200px;
+  height: 20px;
 }
 
 input:focus {

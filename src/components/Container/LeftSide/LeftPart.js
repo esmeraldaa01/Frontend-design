@@ -8,11 +8,7 @@ const LeftPart = () => {
     const {posts } = useContext(Context);
     return (
         <div className='body'>
-            {/*<div className='horizontal'>*/}
-            {/*<p><a href="#news">News</a></p>*/}
-            {/*<p><a href="#sport">Sport</a></p>*/}
-            {/*<p><a href="#enterteiment">Enterteiment</a></p>*/}
-            {/*</div>*/}
+
                     <div className='full-body'>
                         {posts.filter(post => post.category === 'Featured').map((p) => {
                             return (

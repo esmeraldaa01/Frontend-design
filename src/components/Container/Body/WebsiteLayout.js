@@ -12,7 +12,7 @@ const WebsiteLayout = () => {
 
   return (
       <Layout>
-          <Header>
+          <Header style={{height: 80}}>
         <HeaderMenu />
           </Header>
 
