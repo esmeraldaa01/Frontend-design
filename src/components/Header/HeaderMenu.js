@@ -22,7 +22,9 @@ const HeaderMenu = () => {
            <button className='sign-up' onClick={() => navigate(`/signup`)}>Sign up</button>
          </div>
         </div>
-        <div><Menu/></div>
+        <div>
+        <Menu/>
+        </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
  const data = [
     {
         title: 'It is Marys birthday',
-        category :'Featured',
+        category :'Featured',//
         comment : 'happy birthday',
         moreVideos :[
             {
@@ -28,7 +28,7 @@
     },
     {
         title: 'I am hungry',
-        category :'Sport',
+        category :'Sport',//
         comment : 'haha',
         moreVideos :[
             {

@@ -13,7 +13,9 @@ const Signup = () => {
     const { Header, Footer, Sider, Content } = Layout;
   return (
       <Layout>
-          <Header><HeaderMenu/></Header>
+          <Header  style={{height: 80}}>
+          <HeaderMenu/>
+          </Header>
 <Layout>
     <Sider width={500}>
         <div className='left-part'>

@@ -5,15 +5,19 @@ import {Context} from "../../Context/Context";
 
 
 const LeftPart = () => {
-    const {posts } = useContext(Context);
+    const { posts } = useContext(Context);
+
+    const categories = posts.map(x => x.category);
+
+    
     return (
         <div className='body'>
-
-                    <div className='full-body'>
-                        {posts.filter(post => post.category === 'Featured').map((p) => {
+                    {categories.map(x => (
+                          <div className='full-body' id={x.toLowerCase()}>
+                        {posts.filter(post => post.category === x).map((p) => {
                             return (
                                 <div className='vertical'>
-                                    <p className='category'>Featured</p>
+                                    <p className='category'>{x}</p>
                                     <div className='horizontal'>
                                     <img width={400} height={300} src={featured}/>
                                         <div className='vertical'>
@@ -25,54 +29,8 @@ const LeftPart = () => {
                             )
                         })}
                     </div>
-            <div id='news' className='full-body' >
-                {posts.filter(post => post.category === 'News').map((p) => {
-                    return (
-                        <div>
-                            <p className='category'>News</p>
-                            <div className='horizontal'>
-                                <img width={400} height={300} src={featured}/>
-                                <div className='vertical'>
-                                    <p>{p.title}</p>
-                                    <p>{p.comment}</p>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })}
-        </div>
-              <div id='sport' className='full-body' >
-                {posts.filter(post => post.category === 'Sport').map((p) => {
-                    return (
-                        <div>
-                            <p className='category'>Sport</p>
-                            <div className='horizontal'>
-                                <img width={400} height={300} src={featured}/>
-                                <div className='vertical'>
-                                    <p>{p.title}</p>
-                                    <p>{p.comment}</p>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })}
-        </div>
-             <div id='enterteiment' className='full-body' >
-                {posts.filter(post => post.category === 'Enterteiment').map((p) => {
-                    return (
-                        <div>
-                            <p className='category'>Enterteiment</p>
-                            <div className='horizontal'>
-                                <img width={400} height={300} src={featured}/>
-                                <div className='vertical'>
-                                    <p>{p.title}</p>
-                                    <p>{p.comment}</p>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })}
-        </div>
+                    ))}
+         
         </div>
     );
 }

@@ -21,7 +21,7 @@ const Login = () => {
 
     return (
         <Layout  style={{width: '100vw', height: '150vh'}}>
-            <Header> <HeaderMenu/></Header>
+            <Header  style={{height: 80}}> <HeaderMenu/></Header>
 
      <Content style={{ padding: '0 50px' }}>
         <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>
