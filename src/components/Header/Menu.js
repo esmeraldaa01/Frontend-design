@@ -4,10 +4,10 @@ import './Menu.css';
 const Menu = () => {
   return (
 <div className="topnav">
-  <a className="active" href="#home">Home</a>
+  <a className="active" href="#featured">Home</a>
   <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a href="#sport">Sport</a>
+  <a href="#enterteiment">Enterteiment</a>
 </div>
 
   )

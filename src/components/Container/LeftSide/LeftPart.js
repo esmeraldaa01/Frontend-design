@@ -41,6 +41,38 @@ const LeftPart = () => {
                     )
                 })}
         </div>
+              <div id='sport' className='full-body' >
+                {posts.filter(post => post.category === 'Sport').map((p) => {
+                    return (
+                        <div>
+                            <p className='category'>Sport</p>
+                            <div className='horizontal'>
+                                <img width={400} height={300} src={featured}/>
+                                <div className='vertical'>
+                                    <p>{p.title}</p>
+                                    <p>{p.comment}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+        </div>
+             <div id='enterteiment' className='full-body' >
+                {posts.filter(post => post.category === 'Enterteiment').map((p) => {
+                    return (
+                        <div>
+                            <p className='category'>Enterteiment</p>
+                            <div className='horizontal'>
+                                <img width={400} height={300} src={featured}/>
+                                <div className='vertical'>
+                                    <p>{p.title}</p>
+                                    <p>{p.comment}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+        </div>
         </div>
     );
 }
