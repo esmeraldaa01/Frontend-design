@@ -7,17 +7,19 @@ import {Context} from "../../Context/Context";
 const LeftPart = () => {
     const { posts } = useContext(Context);
 
-    const categories = posts.map(x => x.category);
-
+    const allCaregories = posts.map(x => x.category);
+    const categories = allCaregories.filter((item, 
+        index) => allCaregories.indexOf(item) === index);
+  
     
     return (
         <div className='body'>
+           
                     {categories.map(x => (
                           <div className='full-body' id={x.toLowerCase()}>
-                        {posts.filter(post => post.category === x).map((p) => {
+                        {posts.filter(post => post.category === x).map((p) => { 
                             return (
                                 <div className='vertical'>
-                                    <p className='category'>{x}</p>
                                     <div className='horizontal'>
                                     <img width={400} height={300} src={featured}/>
                                         <div className='vertical'>

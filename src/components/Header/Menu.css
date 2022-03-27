@@ -2,7 +2,10 @@
     overflow: hidden;
     background-color: #333;
   }
-  
+  .menu-text{
+    font-size:13px;
+    color:white !important;
+  }
   .topnav a {
     float: left;
     color: #f2f2f2;
