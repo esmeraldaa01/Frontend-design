@@ -1,39 +1,46 @@
-import React, {useContext} from "react";
-import './Posts.css';
-import featured from '../../../assests/featured.jpg'
-import {Context} from "../../Context/Context";
-
+import React, { useContext } from "react";
+import "./Posts.css";
+import featured from "../../../assests/featured.jpg";
+import { Context } from "../../Context/Context";
+import { BsCheckCircleFill } from "react-icons/bs";
 
 const LeftPart = () => {
-    const { posts } = useContext(Context);
+  const { posts } = useContext(Context);
 
-    const allCaregories = posts.map(x => x.category);
-    const categories = allCaregories.filter((item, 
-        index) => allCaregories.indexOf(item) === index);
-  
-    
-    return (
-        <div className='body'>
-           
-                    {categories.map(x => (
-                          <div className='full-body' id={x.toLowerCase()}>
-                        {posts.filter(post => post.category === x).map((p) => { 
-                            return (
-                                <div className='vertical'>
-                                    <div className='horizontal'>
-                                    <img width={400} height={300} src={featured}/>
-                                        <div className='vertical'>
-                                    <p>{p.title}</p>
-                                    <p>{p.comment}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                    ))}
-         
+  const allCaregories = posts.map((x) => x.category);
+  const categories = allCaregories.filter(
+    (item, index) => allCaregories.indexOf(item) === index
+  );
+
+  return (
+    <div className='mainSection'>
+      {categories.map((x) => (
+        <div className='section' id={x.toLowerCase()}>
+          {posts
+            .filter((post) => post.category === x)
+            .map((p) => (
+              <div>
+                <p style={{fontSize:'25px'}}>{p.category}</p>
+                <div>{p.list.map(x => (
+                   <div className='article'>
+                   <img width={450} height={250} src={x.image}/>
+                   <div className='image-info'>
+                                     <p className="label">{x.labelTag}</p>
+                                     <p className='title'>{x.title}</p>
+                                     <div className='subInfo'>
+                                          <BsCheckCircleFill size={10} /> 
+                                         <span className='timestamp'>{x.timestamp}</span>
+                                     </div>
+                                 </div>
+                 </div>
+ 
+                ))}</div>
+              </div>
+            )
+            )}
         </div>
-    );
-}
+      ))}
+    </div>
+  );
+};
 export default LeftPart;

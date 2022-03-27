@@ -1,33 +1,63 @@
-.body{
+.mainSection{
     height: 80%;
 }
-.category{
-    color: black;
-    font-size: 24px;
-    font-weight: bolder;
-    margin-left: 20px;
-}
-.horizontal {
+.section{
     display: flex;
-    justify-content: space-between;
-    margin: 15px 10px 10px 10px;
-    gap: 30px;
-}
-.vertical{
-    display: flex;
-    flex-direction: column;
-}
-.full-body{
-    display: flex;
-    justify-content: space-between;
+    flex-flow: column wrap;
     width: 80%;
+}
+
+.article {
+    display: flex;
+    margin: 40px 0px 65px 50px;
+}
+
+.image-info {
+    display: flex;
+    float: right;
+    flex-flow: column wrap;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #9d9d9d;
 
 }
-.vid-description{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+
+.title {
+    width: 400px;
+    font-family: 'Arial Black';
+    font-weight: bolder;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 5px;
 }
-.right-part{
-margin-top: 50px;
+
+.subInfo {
+    display: flex;
+    gap: 5px;
+}
+
+.srcLogo {
+    height: 16px;
+    width: 16px;
+}
+
+.srcName {
+    color: #7e7e7e;
+    font-family: Retina,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.timestamp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #9d9d9d;
 }

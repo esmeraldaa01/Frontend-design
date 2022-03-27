@@ -3,7 +3,6 @@ import { useContext } from "react";
 import featured from "../../../assests/featured.jpg";
 import "./RightPart.css";
 import { Context } from "../../Context/Context";
-import data from "../../../assests/data";
 
 const RightPart = () => {
   const { posts } = useContext(Context);
@@ -13,57 +12,40 @@ const RightPart = () => {
 
   return (
     <div className="container">
-      <h1 style={{ fontWeight: 800, fontSize: "20px" }}>Featured videos</h1>
-      {categories.map((x) => (
-        <div style={{ marginTop: "150px" }}>
+      {categories.map((category) => (
+        <div style={{ marginTop: "20px" }}>
           {posts
-            .filter((post) => post.category === x)
-            .map((p) => {
+            .filter((post) => post.category === category)
+            .map((filterPost) => {
               return (
-                <div id={x.toLowerCase()}>
-                  {p.moreVideos.featured.map((mvideo) => {
+                <div id={category.toLowerCase()}>
+                  {filterPost.subCategories.map((subCategory) => {
+                    console.log(subCategory);
                     return (
-                      <div className="videos">
-                        <img width={200} height={100} src={featured} />
-                        <div
+                      <div>
+                        <h1
                           style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            margin: "5px",
+                            fontSize: 20,
+                            fontWeight: 700,
+                            marginTop: 50,
                           }}
                         >
-                          <p>{mvideo.title}</p>
-                          <p>{mvideo.added}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              );
-            })}
-        </div>
-      ))}
-       {categories.map((x) => (
-        <div style={{ marginTop: "150px" }}>
-          {posts
-            .filter((post) => post.category === x)
-            .map((p) => {
-              return (
-                <div id={x.toLowerCase()}>
-                  {p.moreVideos.more.map((mvideo) => {
-                    return (
-                      <div className="videos">
-                        <img width={200} height={100} src={featured} />
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            margin: "5px",
-                          }}
-                        >
-                          <p>{mvideo.title}</p>
-                          <p>{mvideo.added}</p>
-                        </div>
+                          {subCategory.name}
+                        </h1>
+                        {subCategory.list.map((subPost) => (
+                          <div className="videos">
+                            <img
+                              className="img"
+                              width={200}
+                              height={100}
+                              src={subPost.image}
+                            />
+                            <p className="title">
+                              {" "}
+                              {subPost.title.substring(0, 40)}...
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     );
                   })}
