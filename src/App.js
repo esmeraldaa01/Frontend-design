@@ -8,16 +8,24 @@ import data from "./assests/data";
 import {Layout} from "antd";
 import HeaderMenu from "./components/Header/HeaderMenu";
 import SideFooter from "./components/Footer/SideFooter";
+import Menu from "./components/Header/Menu";
 
 function App() {
     const [posts, setPosts] = useState(data);
-    const [showMenu, setShowMenu] = useState(false)
-    return (<div>
-        <Context.Provider value={{posts, setPosts, setShowMenu, showMenu}}>
+const [ showMenu , setShowMenu ] = useState(true);
+
+    const displayMenu = (bool) => {
+     setShowMenu(bool)
+    }
+
+    return (
+        <div>
+        <Context.Provider value={{posts, setPosts }}>
             <Router>
                 <Layout>
-                    <Layout.Header style={{height: 85}}>
-                        <HeaderMenu/>
+                    <Layout.Header style={{height: showMenu ? 85 : 55}}>
+                        <HeaderMenu displayMenu={displayMenu}/>
+                        {showMenu && <Menu/>}
                     </Layout.Header>
                         <Routes>
                             <Route path="/" element={<WebsiteLayout/>}/>
@@ -30,7 +38,8 @@ function App() {
                 </Layout>
             </Router>
         </Context.Provider>
-    </div>);
+    </div>
+    );
 }
 
 export default App;

@@ -14,30 +14,42 @@ import {Context} from "../Context/Context";
 * Make use of styled-components lib to handle css part
 * */
 
-const HeaderMenu = () => {
-    const {showMenu, setShowMenu } = useContext(Context);
+const HeaderMenu = ({displayMenu}) => {
+
     let navigate = useNavigate();
 
 const handleNavigate = () => {
   navigate(`/`);
-    setShowMenu(true)
+  displayMenu(true)
 }
+
+    const handleNavigateLogin = () => {
+        navigate(`/login`);
+        displayMenu(false)
+    }
+
+    const handleNavigateSignUp = () => {
+        navigate(`/signup`);
+        displayMenu(false)
+    }
+
     return (
     <div style={{display:'flex', flexDirection:'column'}}>
       
         <div className='header-container'>
+
             <div>
             <p onClick={handleNavigate} className='logo-name'>dailymotion</p>
             </div>
+
          <div className='menu'>
             <Search/>
-           <button className='login' onClick={() => navigate(`/login`)}> <AiOutlineUser/> Login</button>
-           <button className='sign-up' onClick={() => navigate(`/signup`)}>Sign up</button>
+           <button className='login' onClick={handleNavigateLogin}> <AiOutlineUser/> Login</button>
+           <button className='sign-up' onClick={handleNavigateSignUp}>Sign up</button>
          </div>
+
         </div>
-        <div>
-            {showMenu && <Menu/>}
-        </div>
+
         </div>
     )
 }

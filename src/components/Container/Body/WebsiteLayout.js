@@ -5,9 +5,9 @@ import {Layout} from 'antd';
 import RightPart from "../RightSide/RightPart";
 import './WebsiteLayout.css';
 
+const { Sider, Content} = Layout;
 
 const WebsiteLayout = () => {
-    const {Header, Footer, Sider, Content} = Layout;
 
     return (
         <Layout>

@@ -1,23 +1,29 @@
 .topnav {
-    overflow: hidden;
-    background-color: #2c2929;
+  overflow: hidden;
+  background-color: #2c2929;
   color: white;
-  }
-  .menu-text{
-    font-weight: 700;
-  }
-  .topnav a {
-    float: left;
-    text-align: center;
-    padding: 15px 60px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  
-  .topnav a:hover {
-    color: white;
-  } 
-  .topnav a.active {
-    color: white;
-  }
+}
+.menu-text{
+  font-weight: 700;
+}
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 15px 60px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.topnav a:hover {
+  color: white;
+}
+.topnav a.active {
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

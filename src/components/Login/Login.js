@@ -4,22 +4,21 @@ import { AiFillGoogleCircle} from "react-icons/ai";
 import { BsFacebook} from "react-icons/bs";
 import './Login.css';
 import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined ,FacebookOutlined ,DownOutlined , UpOutlined } from '@ant-design/icons';
-
 import { Layout } from 'antd';
-import {Context} from "../Context/Context";
+
+const {  Content } = Layout;
 
 const Login = () => {
-    const {setShowMenu  } = useContext(Context);
    const [showSocialMedia , setShowSocialMedia] = useState(false)
 
-    const { Header, Footer, Sider, Content } = Layout;
+
 
     const showSocialMediaBtn = () => {
        if(!showSocialMedia) setShowSocialMedia(true);
        else setShowSocialMedia(false)
     }
 
-    setShowMenu(false);
+
     return (
         <Layout  style={{width: '100vw', height: '150vh'}}>
             <Content style={{ padding: '0 50px' }}>
