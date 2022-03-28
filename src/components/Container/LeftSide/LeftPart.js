@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./Posts.css";
-import featured from "../../../assests/featured.jpg";
 import { Context } from "../../Context/Context";
 import { BsCheckCircleFill } from "react-icons/bs";
 
@@ -20,7 +19,7 @@ const LeftPart = () => {
             .filter((post) => post.category === x)
             .map((p) => (
               <div>
-                <p style={{fontSize:'25px'}}>{p.category}</p>
+                <p className='category-left'>{p.category}</p>
                 <div>{p.list.map(x => (
                    <div className='article'>
                    <img width={450} height={250} src={x.image}/>
@@ -33,7 +32,6 @@ const LeftPart = () => {
                                      </div>
                                  </div>
                  </div>
- 
                 ))}</div>
               </div>
             )

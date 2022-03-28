@@ -65,3 +65,8 @@ a, a:hover, a:visited {
     font-weight: lighter;
     word-spacing: -1px;
 }
+.a, a:visited {
+    color: lightgray !important;
+    font-size: 14px;
+    font-weight: 700;
+}

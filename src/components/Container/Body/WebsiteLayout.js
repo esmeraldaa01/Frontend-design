@@ -1,5 +1,4 @@
 import HeaderMenu from "../../Header/HeaderMenu";
-import { useEffect, useState } from "react";
 import LeftPart from "../LeftSide/LeftPart";
 import SideFooter from "../../Footer/SideFooter";
 import { Layout } from 'antd';
@@ -12,7 +11,7 @@ const WebsiteLayout = () => {
 
   return (
       <Layout>
-          <Header style={{height: 80}}>
+          <Header style={{height: 85}}>
         <HeaderMenu />
           </Header>
 
