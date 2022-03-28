@@ -6,6 +6,14 @@ import Search from "../Search/Search";
 import Menu from './Menu'
 import {Context} from "../Context/Context";
 
+
+/*
+* Refactor steps
+* Make code readable
+* Make use of Row,Col for the layout part
+* Make use of styled-components lib to handle css part
+* */
+
 const HeaderMenu = () => {
     const {showMenu, setShowMenu } = useContext(Context);
     let navigate = useNavigate();
