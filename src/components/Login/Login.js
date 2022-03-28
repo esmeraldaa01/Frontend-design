@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import HeaderMenu from "../Header/HeaderMenu";
 import {Space, Button, Input} from 'antd';
 import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined ,FacebookOutlined ,DownOutlined , UpOutlined } from '@ant-design/icons';
@@ -8,8 +8,10 @@ import './Login.css';
 import SideFooter from "../Footer/SideFooter";
 
 import { Layout } from 'antd';
+import {Context} from "../Context/Context";
 
 const Login = () => {
+    const {setShowMenu  } = useContext(Context);
    const [showSocialMedia , setShowSocialMedia] = useState(false)
 
     const { Header, Footer, Sider, Content } = Layout;
@@ -19,9 +21,10 @@ const Login = () => {
        else setShowSocialMedia(false)
     }
 
+    setShowMenu(false);
     return (
         <Layout  style={{width: '100vw', height: '150vh'}}>
-            <Header  style={{height: 80}}> <HeaderMenu/></Header>
+             <Header  style={{height: 80}}> <HeaderMenu/></Header>
 
      <Content style={{ padding: '0 50px' }}>
         <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>

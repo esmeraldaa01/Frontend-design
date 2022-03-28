@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import featured from "../../../assests/featured.jpg";
 import "./RightPart.css";
 import { Context } from "../../Context/Context";
+import {BsCheckCircleFill} from "react-icons/bs";
 
 const RightPart = () => {
   const { posts } = useContext(Context);
@@ -22,30 +22,35 @@ const RightPart = () => {
                   {filterPost.subCategories.map((subCategory) => {
                     console.log(subCategory);
                     return (
-                      <div>
+                      <div style={{marginBottom:'240px'}}>
                         <h1
                           style={{
-                            fontSize: 20,
-                            fontWeight: 700,
+                            fontSize: 15,
+                            fontWeight: 900,
                           }}
                         >
-                          <p>{subCategory.name}</p>
+                          <p style={{marginBottom:'0px'}}>{subCategory.name}</p>
                           <p className='category-name'>{subCategory.secName}</p>
                         </h1>
                         {subCategory.list.map((subPost) => (
                           <div className="videos">
                             <img
                               className="img"
-                              width={200}
-                              height={100}
+                              width={230}
+                              height={140}
                               src={subPost.image}
                             />
                             <div className='vertical'>
-                            <p className="title">
+                            <p className="title-right">
                               {" "}
-                              {subPost.title.substring(0, 30)}...
+                              {subPost.title.substring(0, 45)}...
                             </p>
-                            <p className='added'>{subPost.added}</p>
+                              <div style={{display:'flex', gap:'5px', marginLeft:'10px'}}>
+                              <img width={20} height={10} src={subPost.icon} />
+                              <p className='added'>{subPost.iconName}</p>
+                                <BsCheckCircleFill size={10} />
+                              </div>
+                              <p className='h-added'>{subPost.added}</p>
                             </div>
                           </div>
                         ))}

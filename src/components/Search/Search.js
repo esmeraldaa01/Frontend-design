@@ -27,10 +27,11 @@ const {posts , setPosts } = useContext(Context)
 
     const handleInput = (e) => {
         setInputValue(e.target.value);
-
-        const filterData = data.filter((item) => {
-            return Object.values(item).join('').toLowerCase().includes(inputValue.toLowerCase())
-        })
+debugger
+         // return Object.values(item).join('').toLowerCase().includes(inputValue.toLowerCase())
+        const filterData = data.map((item) => item.list.filter(x => x.title.includes(inputValue.toLowerCase()))
+        )
+        console.log(filterData);
         setPosts(filterData);
     }
 

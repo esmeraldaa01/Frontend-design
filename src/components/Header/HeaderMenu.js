@@ -1,20 +1,25 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './Header.css';
 import { AiOutlineUser } from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
 import Search from "../Search/Search";
 import Menu from './Menu'
+import {Context} from "../Context/Context";
 
 const HeaderMenu = () => {
+    const {showMenu, setShowMenu } = useContext(Context);
     let navigate = useNavigate();
 
-
+const handleNavigate = () => {
+  navigate(`/`);
+    setShowMenu(true)
+}
     return (
     <div style={{display:'flex', flexDirection:'column'}}>
       
         <div className='header-container'>
             <div>
-            <p onClick={() => navigate(`/`)} className='logo-name'>dailymotion</p>
+            <p onClick={handleNavigate} className='logo-name'>dailymotion</p>
             </div>
          <div className='menu'>
             <Search/>
@@ -23,7 +28,7 @@ const HeaderMenu = () => {
          </div>
         </div>
         <div>
-        <Menu/>
+            {showMenu && <Menu/>}
         </div>
         </div>
     )

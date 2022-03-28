@@ -8,6 +8,7 @@ const Menu = () => {
   <a  href="#news">News</a>
   <a  href="#sport">Sport</a>
   <a  href="#enterteiment">Enterteiment</a>
+  <a  href="#music">Music</a>
 </div>
 
   )

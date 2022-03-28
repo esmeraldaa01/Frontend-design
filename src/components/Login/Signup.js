@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Input, Select, Checkbox, Button, Layout} from "antd";
 import {UserOutlined, EyeInvisibleOutlined,GiftOutlined, UndoOutlined} from "@ant-design/icons";
 import HeaderMenu from "../Header/HeaderMenu";
@@ -6,11 +6,14 @@ import '../Header/Header.css';
 import './Signup.css';
 import { FiCircle } from 'react-icons/fi';
 import SideFooter from "../Footer/SideFooter";
+import {Context} from "../Context/Context";
 
 const { Option } = Select;
 
 const Signup = () => {
     const { Header, Footer, Sider, Content } = Layout;
+    const {setShowMenu  } = useContext(Context);
+    setShowMenu(false);
   return (
       <Layout>
           <Header  style={{height: 80}}>

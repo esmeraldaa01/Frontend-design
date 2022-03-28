@@ -8,38 +8,46 @@ const LeftPart = () => {
 
   const allCaregories = posts.map((x) => x.category);
   const categories = allCaregories.filter(
-    (item, index) => allCaregories.indexOf(item) === index
+      (item, index) => allCaregories.indexOf(item) === index
   );
 
   return (
-    <div className='mainSection'>
-      {categories.map((x) => (
-        <div className='section' id={x.toLowerCase()}>
-          {posts
-            .filter((post) => post.category === x)
-            .map((p) => (
-              <div>
-                <p className='category-left'>{p.category}</p>
-                <p className='category-left'>{p.categoryTitle}</p>
-                <div>{p.list.map(x => (
-                   <div className='article'>
-                   <img width={450} height={250} src={x.image}/>
-                   <div className='image-info'>
-                                     <p className="label">{x.labelTag}</p>
-                                     <p className='title'>{x.title}</p>
-                                     <div className='subInfo'>
-                                          <BsCheckCircleFill size={10} /> 
-                                         <span className='timestamp'>{x.timestamp}</span>
-                                     </div>
-                                 </div>
-                 </div>
-                ))}</div>
-              </div>
-            )
-            )}
-        </div>
-      ))}
-    </div>
+      <div className='mainSection'>
+        {categories.map((x) => (
+            <div className='section' id={x.toLowerCase()}>
+              {posts
+                  .filter((post) => post.category === x)
+                  .map((p) => (
+                          <div>
+                            <h1 className='categoryName'>{p.category}</h1>
+                            <h3 className='categoryTitle'>{p.categoryTitle}</h3>
+                            <div>{p.list.map(x => (
+                                <div className='article'>
+                                  <img width={450} height={250} src={x.image} />
+                                  <div className='image-info'>
+                                    <p className="label">{x.labelTag}</p>
+                                    <p className='titleLeft'>{x.title}</p>
+                                    <div className='subInfo'>
+                                      <img className='srcLogo' src={x.sourceLogo} />
+                                      <span className='srcName'>{x.sourceName}</span>
+                                      <BsCheckCircleFill size={10} />
+                                      <span className='timestamp'>{x.timestamp}</span>
+                                    </div>
+                                    {x.seeMore ? (
+                                        <div className='more'>
+                                          <span className='seeMore'>{x.seeMore}</span>
+                                          <div className='buttonName'>{x.buttonName}</div>
+                                        </div>
+                                    ) : ''}
+                                  </div>
+                                </div>
+                            ))}</div>
+                          </div>
+                      )
+                  )}
+            </div>
+        ))}
+      </div>
   );
 };
 export default LeftPart;

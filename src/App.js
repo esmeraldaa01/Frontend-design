@@ -8,10 +8,12 @@ import {useState} from "react";
 import data from "./assests/data";
 
 function App() {
-    const [posts , setPosts] = useState(data)
+    const [posts , setPosts] = useState(data);
+    const [showMenu , setShowMenu] = useState(true);
+
   return (
     <div>
-        <Context.Provider value={{posts , setPosts}}>
+        <Context.Provider value={{posts , setPosts, setShowMenu , showMenu}}>
         <Routes>
             <Route path="/" element={<WebsiteLayout />}/>
             <Route path="/login" element={<Login />}/>

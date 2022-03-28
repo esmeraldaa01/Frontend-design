@@ -1,3 +1,9 @@
 .ant-layout-sider-children {
     background-color: #eeebeb;
 }
+.header{
+    height: 85px;
+}
+.header-aft{
+    height: 50px;
+}

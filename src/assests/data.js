@@ -42,6 +42,9 @@ import rdMLogo from './rdMLogo.PNG';
 import billboard from './billboard.jpg';
 import rthMLogo from './rthMLogo.PNG';
 import rollingStones from './rollingStones.png';
+import hollywoodLife from './hollywoodLife.png';
+import wired from './wired.png';
+import cosmopolitan from './cosmopolitan.jpg';
 
 const data = [
   {
@@ -95,17 +98,24 @@ const data = [
                 "Heidi Montag Accuses Lady Gaga Of Sabotaging Her Music Career And Stealing Her Song",
             added: "Added 2 days ago",
             image: vip,
+            icon: hollywoodLife,
+            iconName : 'HollywoodLife'
+
           },
           {
             title:
                 "Astrophysicist Explains Black Holes in 5 Levels of Difficulty",
             added: "Added 3 days ago",
             image: pic2,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title: "Knot Just a Heart Braid | Cosmo's The Braid Up",
             added: "Added 3 days ago",
             image: girl,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
         ],
       },
@@ -150,31 +160,38 @@ const data = [
     ],
     subCategories: [
       {
-        name: "Discover",
+        name: "TOP STORIES",
+        secName: 'You may have missed',
         list: [
           {
             title:
                 "Heidi Montag Accuses Lady Gaga Of Sabotaging Her Music Career And Stealing Her Song",
             added: "Added 2 days ago",
             image: vip,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title:
                 "Astrophysicist Explains Black Holes in 5 Levels of Difficulty",
             added: "Added 3 days ago",
             image: pic2,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title: "Knot Just a Heart Braid | Cosmo's The Braid Up",
             added: "Added 3 days ago",
             image: girl,
+            icon: wired,
+            iconName: 'Wired'
           },
         ],
       },
     ],
   },
   {
-    category: "Sports",
+    category: "Sport",
     categoryTitle: "Top sports moments",
     list: [
       {
@@ -212,53 +229,67 @@ const data = [
     ],
     subCategories: [
       {
-        name: "More",
+        name: "DISCOVER VIDEOS",
+        secName: 'From Stringr',
         list: [
           {
             title:
                 "Heidi Montag Accuses Lady Gaga Of Sabotaging Her Music Career And Stealing Her Song",
             added: "Added 2 days ago",
             image: vip,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
           {
             title:
                 "Astrophysicist Explains Black Holes in 5 Levels of Difficulty",
             added: "Added 3 days ago",
             image: pic2,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title: "Knot Just a Heart Braid | Cosmo's The Braid Up",
             added: "Added 3 days ago",
             image: girl,
+            icon: wired,
+            iconName: 'Wired'
           },
         ],
       },
       {
-        name: "topstories",
+        name:'DISCOVER VIDEOS',
+        secName: "From Brut America",
         list: [
           {
             title:
                 "U2 Scripted Series From J.J. Abrams in the Works at Netflix | THR News",
             added: "Added 9 days ago",
             image: group,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title:
                 "Elie Mystal says the Constitution is deeply flawed in his book Let Me Retort",
             added: "Added 4 days ago",
             image: men,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title: "Christian Gates Answers Fans' Questions",
             added: "Added 4 days ago",
-            image: clns,
+            image: group,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
         ],
       },
     ],
   },
   {
-    category: "Entertainment",
+    category: "Enterteiment",
     categoryTitle: "In the spotlight",
     list: [
       {
@@ -300,46 +331,60 @@ const data = [
     ],
     subCategories: [
       {
-        name: "More",
+        name: "DISCOVER VIDEOS",
+        secName: 'From The Hollywood Reporter',
         list: [
           {
             title:
                 "Heidi Montag Accuses Lady Gaga Of Sabotaging Her Music Career And Stealing Her Song",
             added: "Added 2 days ago",
             image: vip,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title:
                 "Astrophysicist Explains Black Holes in 5 Levels of Difficulty",
             added: "Added 3 days ago",
             image: pic2,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
           {
             title: "Knot Just a Heart Braid | Cosmo's The Braid Up",
             added: "Added 3 days ago",
             image: girl,
+            icon: wired,
+            iconName: 'Wired'
           },
         ],
       },
       {
-        name: "Topstories",
-        list: [
+        name: "DISCOVER VIDEOS",
+        secName: 'From esencemagazine',
+        list:[
           {
             title:
                 "U2 Scripted Series From J.J. Abrams in the Works at Netflix | THR News",
             added: "Added 9 days ago",
             image: group,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title:
                 "Elie Mystal says the Constitution is deeply flawed in his book Let Me Retort",
             added: "Added 4 days ago",
             image: men,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title: "Christian Gates Answers Fans' Questions",
             added: "Added 4 days ago",
-            image: clns,
+            image: men,
+            icon: wired,
+            iconName: 'Wired'
           },
         ],
       },
@@ -388,46 +433,60 @@ const data = [
     ],
     subCategories: [
       {
-        name: "More",
+        name: "DISCOVER VIDEOS",
+        secName: 'From Genius',
         list: [
           {
             title:
                 "Heidi Montag Accuses Lady Gaga Of Sabotaging Her Music Career And Stealing Her Song",
             added: "Added 2 days ago",
             image: vip,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title:
                 "Astrophysicist Explains Black Holes in 5 Levels of Difficulty",
             added: "Added 3 days ago",
             image: pic2,
+            icon: wired,
+            iconName: 'Wired'
           },
           {
             title: "Knot Just a Heart Braid | Cosmo's The Braid Up",
             added: "Added 3 days ago",
             image: girl,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
         ],
       },
       {
-        name: "Topstories",
+        name: "DISCOVER VIDEOS",
+        secName: 'From Rolling Stone',
         list: [
           {
             title:
                 "U2 Scripted Series From J.J. Abrams in the Works at Netflix | THR News",
             added: "Added 9 days ago",
             image: group,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
           {
             title:
                 "Elie Mystal says the Constitution is deeply flawed in his book Let Me Retort",
             added: "Added 4 days ago",
             image: men,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
           {
             title: "Christian Gates Answers Fans' Questions",
             added: "Added 4 days ago",
-            image: clns,
+            image: men,
+            icon: cosmopolitan,
+            iconName: 'Cosmopolitan'
           },
         ],
       },
