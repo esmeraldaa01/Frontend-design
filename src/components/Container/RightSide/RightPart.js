@@ -27,10 +27,10 @@ const RightPart = () => {
                           style={{
                             fontSize: 20,
                             fontWeight: 700,
-                            marginTop: 50,
                           }}
                         >
-                          {subCategory.name}
+                          <p>{subCategory.name}</p>
+                          <p className='category-name'>{subCategory.secName}</p>
                         </h1>
                         {subCategory.list.map((subPost) => (
                           <div className="videos">
@@ -40,10 +40,13 @@ const RightPart = () => {
                               height={100}
                               src={subPost.image}
                             />
+                            <div className='vertical'>
                             <p className="title">
                               {" "}
-                              {subPost.title.substring(0, 40)}...
+                              {subPost.title.substring(0, 30)}...
                             </p>
+                            <p className='added'>{subPost.added}</p>
+                            </div>
                           </div>
                         ))}
                       </div>

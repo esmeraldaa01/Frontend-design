@@ -20,6 +20,7 @@ const LeftPart = () => {
             .map((p) => (
               <div>
                 <p className='category-left'>{p.category}</p>
+                <p className='category-left'>{p.categoryTitle}</p>
                 <div>{p.list.map(x => (
                    <div className='article'>
                    <img width={450} height={250} src={x.image}/>
