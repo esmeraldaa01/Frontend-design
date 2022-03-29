@@ -12,7 +12,7 @@ import Menu from "./components/Header/Menu";
 
 function App() {
     const [posts, setPosts] = useState(data);
-const [ showMenu , setShowMenu ] = useState(true);
+    const [ showMenu , setShowMenu ] = useState(true);
 
     const displayMenu = (bool) => {
      setShowMenu(bool)

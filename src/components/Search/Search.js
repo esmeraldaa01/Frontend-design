@@ -11,7 +11,8 @@ const Search = () => {
     const [inputValue, setInputValue] = useState("");
     const [searchItems, setSearchItems] = useState([]);
     const [secondModal, setSecondModal] = useState(false);
-    const { setPosts} = useContext(Context)
+    const {posts, setPosts} = useContext(Context);
+
     const handleCancelModal = () => {
         setSecondModal(false)
     }
@@ -26,18 +27,20 @@ const Search = () => {
     };
 
     //.indexOf(inputValue.toLowerCase()) !== -1
+
     const handleInput = (e) => {
         setInputValue(e.target.value);
 
-        const filterData = data.filter((item) => {
+        const filterData = posts.filter((item) => {
             return item.list.filter((x) => {
                 return Object.values(x).join('').toLowerCase().includes(inputValue.toLowerCase())
             })
         })
-
-        console.log(filterData);
         setPosts(filterData);
     }
+
+
+
 
     useEffect(() => {
         const timer = setTimeout(() => {

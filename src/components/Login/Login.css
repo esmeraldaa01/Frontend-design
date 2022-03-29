@@ -27,7 +27,7 @@
 }
 
 .form-input{
-    width: 90%;
+    width: 98%;
     align-self: center;
     margin: 0 50px;
     box-sizing: border-box;
@@ -39,7 +39,7 @@ Button{
 .login-footer{
     border-top: 1px solid #6e6c6c;
     width: 280px;
-    margin-left: -50px;
+    margin-left: -44px;
     margin-top: 40px;
     place-items: center start;
     display: flex;

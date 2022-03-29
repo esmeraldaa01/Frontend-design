@@ -1,7 +1,5 @@
 .signup-container{
-    display: flex;
     gap: 10px;
-    flex-direction: column;
     margin: 30px 40px 20px 50px;
     top: 10%;
     left: 50%;
@@ -17,12 +15,13 @@
     height: 60px;
     background-color: #f5f1f1;
     border: 1px solid #d9d6d6;
-text-align: center;
+    text-align: center;
     padding: 20px 10px 10px 20px;
     margin-top: 30px;
+    margin-left: 25px;
 }
 .signup-button{
-    width: 300px;
+    width: 350px;
     height: 40px;
     border-radius: 8px;
     background-color: grey;
@@ -34,6 +33,14 @@ text-align: center;
     background-color: white;
 }
 .apps {
-    width: 300px;
+    width: 350px;
     height: 40px;
+}
+.terms-use{
+   margin-top: 10px;
+    display: flex;
+    font-size: 12px;
+}
+.or{
+    margin-left: 40%;
 }

@@ -3,16 +3,31 @@ import { useContext } from "react";
 import "./RightPart.css";
 import { Context } from "../../Context/Context";
 import SubArticles from "./SubArticles";
+import styled from 'styled-components'
+import {Col} from "antd";
+
+const Title = styled.p`
+  color: black;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 13px;
+`;
+
+const Header = styled.h1`
+    font-weight: 800;
+    font-size: 22px ;
+    color:rgb(87, 85, 85);
+  `
 
 const RightPart = () => {
   const { posts } = useContext(Context);
 
-  const d = posts.map((x) => x.category);
-  const categories = d.filter((item, index) => d.indexOf(item) === index);
+  const categories = posts.map((x) => x.category);
+  const filterCategories = categories.filter((item, index) => categories.indexOf(item) === index);
 
   return (
     <div className="container">
-      {categories.map((category) => (
+      {filterCategories.map((category) => (
         <div style={{ marginTop: "20px" }}>
           {posts
             .filter((post) => post.category === category)
@@ -20,20 +35,12 @@ const RightPart = () => {
               return (
                 <div id={category.toLowerCase()}>
                   {filterPost.subCategories.map((subCategory) => {
-                    console.log(subCategory);
                     return (
-                      <div style={{marginBottom:'240px'}}>
-                        <h1
-                          style={{
-                            fontSize: 15,
-                            fontWeight: 900,
-                          }}
-                        >
-                          <p style={{marginBottom:'0px'}}>{subCategory.name}</p>
-                          <p className='category-name'>{subCategory.secName}</p>
-                        </h1>
+                      <Col style={{marginBottom:'150px'}}>
+                          <Title>{subCategory.name.toUpperCase()}</Title>
+                        <Header>{subCategory.secName}</Header>
                         {subCategory.list.map((subPost) => <SubArticles subPost={subPost}/>)}
-                      </div>
+                      </Col>
                     );
                   })}
                 </div>

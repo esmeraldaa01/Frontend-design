@@ -5,6 +5,7 @@ import { BsFacebook} from "react-icons/bs";
 import './Login.css';
 import {EyeInvisibleOutlined, EyeTwoTone, UserOutlined ,FacebookOutlined ,DownOutlined , UpOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
+import styled from "styled-components";
 
 const {  Content } = Layout;
 
@@ -18,12 +19,23 @@ const Login = () => {
        else setShowSocialMedia(false)
     }
 
+    const Password = styled.div`
+      color: #0a7bd5;
+      font-size: 14px;
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 600;
+  
+  &.bold{
+    font-weight: 900;
+  }
+`;
 
     return (
-        <Layout  style={{width: '100vw', height: '150vh'}}>
-            <Content style={{ padding: '0 50px' }}>
+        <Layout  style={{ height: '105vh'}}>
+            <Content>
                 <div className='form-card' style={{height:`${showSocialMedia ? '600px' : '500px'}`}}>
-                    <h1 style={{color: "black"}}>Login</h1>
+                    <h1 style={{color: "black", fontWeight:900}}>Login</h1>
                     <Space direction="vertical" className='form-input'>
                         <Input label="name"
                                size="large"
@@ -35,6 +47,7 @@ const Login = () => {
                                         iconRender={visible => (visible ? <EyeTwoTone/> : <EyeInvisibleOutlined/>)}
 
                         />
+                        <Password>Forgot your password ?</Password>
                         <Button block
                                 value="large"
                                 shape="rectangle"
@@ -43,6 +56,7 @@ const Login = () => {
                         >
                             Log in
                         </Button>
+                        <p>No account?Sign up</p>
                         <div className='login-footer'>
                             <p  style={{display:'flex', alignItems:'center'}}>
                                 <div>
