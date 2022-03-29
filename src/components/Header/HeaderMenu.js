@@ -1,11 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import './Header.css';
 import { AiOutlineUser } from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
 import Search from "../Search/Search";
-import Menu from './Menu'
-import {Context} from "../Context/Context";
-
+import { Row, Col, Divider } from 'antd';
 
 /*
 * Refactor steps
@@ -34,23 +32,20 @@ const handleNavigate = () => {
     }
 
     return (
-    <div style={{display:'flex', flexDirection:'column'}}>
-      
-        <div className='header-container'>
+    <Row>
 
-            <div>
-            <p onClick={handleNavigate} className='logo-name'>dailymotion</p>
-            </div>
+            <Col flex={3}>
+            <p className='logo-name' onClick={handleNavigate} >dailymotion</p>
+            </Col>
 
-         <div className='menu'>
-            <Search/>
+         <Col flex={2}>
+             <Search/>
+         </Col>
+        <Col flex={1}>
            <button className='login' onClick={handleNavigateLogin}> <AiOutlineUser/> Login</button>
            <button className='sign-up' onClick={handleNavigateSignUp}>Sign up</button>
-         </div>
-
-        </div>
-
-        </div>
+        </Col>
+        </Row>
     )
 }
 export default HeaderMenu;

@@ -11,7 +11,7 @@ const Search = () => {
     const [inputValue, setInputValue] = useState("");
     const [searchItems, setSearchItems] = useState([]);
     const [secondModal, setSecondModal] = useState(false);
-    const {posts, setPosts} = useContext(Context)
+    const { setPosts} = useContext(Context)
     const handleCancelModal = () => {
         setSecondModal(false)
     }
@@ -29,7 +29,6 @@ const Search = () => {
     const handleInput = (e) => {
         setInputValue(e.target.value);
 
-        console.log(posts, 'dataaa');
         const filterData = data.filter((item) => {
             return item.list.filter((x) => {
                 return Object.values(x).join('').toLowerCase().includes(inputValue.toLowerCase())
