@@ -33,7 +33,7 @@ const Search = () => {
 
         const filterData = posts.filter((item) => {
             return item.list.filter((x) => {
-                return Object.values(x).join('').toLowerCase().includes(inputValue.toLowerCase())
+                return JSON.stringify(Object.values(x)).join('').toLowerCase().includes(inputValue.toLowerCase())
             })
         })
         setPosts(filterData);
